@@ -3,6 +3,23 @@
 ## Abstract
 One of the main components of the majority of high performance digital systems, including microprocessors, signal processing circuits, FIR filters, etc., is the multiplier. The demand of fast multipliers with low power consumption is increasing day by day. Inspired by this fact a 4 bit Wallace tree multiplier has been designed in this work. A Wallace multiplier is a hardware implementation of a binary multiplier, a digital circuit that multiplies two binary numbers. It uses a selection of full and half adders (the Wallace tree or Wallace reduction) to sum partial products in stages until two numbers are left. Wallace multipliers reduce as much as possible on each layer.
 
+## Table of Content
+
+- [4-bit_Wallace_Tree_Multipler](#4-bit-wallace-tree-multipler)
+  * [Abstract](#abstract)
+  * [Reference Circuit Diagram](#reference-circuit-diagram)
+  * [Reference Waveform](#reference-waveform)
+  * [Circuit Details](#circuit-details)
+  * [Software Used](#software-used)
+    + [eSim](#esim)
+    + [NgSpice](#ngspice)
+    + [Makerchip](#makerchip)
+  * [Circuit Diagram in eSim](#circuit-diagram-in-esim)
+  * [Observations](#observations)
+  * [Steps to generate NgVeri Model](#steps-to-generate-ngveri-model)
+  * [Steps to Run simulation of my project](#steps-to-run-simulation-of-my-project)
+
+
 ## Reference Circuit Diagram
 ![image](https://user-images.githubusercontent.com/84026974/207696072-96b89606-287e-472f-be0b-9a4cdfddf136.png)
 
