@@ -1,0 +1,78 @@
+* c:\users\amisha\esim-workspace\amisha_wallace\amisha_wallace.cir
+
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+* u5  net-_u10-pad9_ net-_u10-pad10_ net-_u10-pad11_ net-_u10-pad12_ net-_u10-pad13_ net-_u10-pad14_ net-_u10-pad15_ net-_u10-pad16_ net-_u11-pad1_ net-_u11-pad2_ net-_u11-pad3_ net-_u11-pad4_ net-_u11-pad5_ net-_u11-pad6_ net-_u11-pad7_ net-_u11-pad8_ amisha_4bit_wallace
+* u11  net-_u11-pad1_ net-_u11-pad2_ net-_u11-pad3_ net-_u11-pad4_ net-_u11-pad5_ net-_u11-pad6_ net-_u11-pad7_ net-_u11-pad8_ net-_sc2-pad2_ net-_sc6-pad2_ net-_sc10-pad2_ net-_sc14-pad2_ net-_sc15-pad2_ net-_sc11-pad2_ net-_sc7-pad2_ net-_sc3-pad2_ dac_bridge_8
+* u10  a3 a2 a1 a0 b3 b2 b1 b0 net-_u10-pad9_ net-_u10-pad10_ net-_u10-pad11_ net-_u10-pad12_ net-_u10-pad13_ net-_u10-pad14_ net-_u10-pad15_ net-_u10-pad16_ adc_bridge_8
+xsc3 prod0 net-_sc3-pad2_ gnd sky130_fd_pr__res_generic_nd 
+xsc7 prod1 net-_sc7-pad2_ gnd sky130_fd_pr__res_generic_nd 
+xsc11 prod2 net-_sc11-pad2_ gnd sky130_fd_pr__res_generic_nd 
+xsc15 prod3 net-_sc15-pad2_ gnd sky130_fd_pr__res_generic_nd 
+xsc2 prod7 net-_sc2-pad2_ gnd sky130_fd_pr__res_generic_nd 
+xsc6 prod6 net-_sc6-pad2_ gnd sky130_fd_pr__res_generic_nd 
+xsc10 prod5 net-_sc10-pad2_ gnd sky130_fd_pr__res_generic_nd 
+xsc14 prod4 net-_sc14-pad2_ gnd sky130_fd_pr__res_generic_nd 
+xsc4 prod0 gnd sky130_fd_pr__cap_mim_m3_1 
+xsc8 prod1 gnd sky130_fd_pr__cap_mim_m3_1 
+xsc12 prod2 gnd sky130_fd_pr__cap_mim_m3_1 
+xsc16 prod3 gnd sky130_fd_pr__cap_mim_m3_1 
+xsc1 prod7 gnd sky130_fd_pr__cap_mim_m3_1 
+xsc5 prod6 gnd sky130_fd_pr__cap_mim_m3_1 
+xsc9 prod5 gnd sky130_fd_pr__cap_mim_m3_1 
+xsc13 prod4 gnd sky130_fd_pr__cap_mim_m3_1 
+v4  a1 gnd pulse(0 5 0 0.1m 0.1m 20 40)
+v2  a0 gnd pulse(0 5 0 0.1m 0.1m 40 70)
+v8  b0 gnd pulse(0 5 0 0.1m 0.1m 40 70)
+v6  b1 gnd pulse(0 5 0 0.1m 0.1m 20 40)
+v3  b2 gnd pulse(0 5 0 0.1m 0.1m 10 20)
+v1  b3 gnd pulse(0 5 0 0.1m 0.1m 5 10)
+v5  a2 gnd pulse(0 5 0 0.1m 0.1m 10 20)
+v7  a3 gnd pulse(0 5 0 0.1m 0.1m 5 10)
+* u8  a3 plot_v1
+* u6  a2 plot_v1
+* u4  a1 plot_v1
+* u2  a0 plot_v1
+* u9  b0 plot_v1
+* u7  b1 plot_v1
+* u3  b2 plot_v1
+* u1  b3 plot_v1
+* u12  prod7 plot_v1
+* u15  prod6 plot_v1
+* u17  prod5 plot_v1
+* u18  prod4 plot_v1
+* u13  prod0 plot_v1
+* u14  prod1 plot_v1
+* u16  prod2 plot_v1
+* u19  prod3 plot_v1
+* s c m o d e
+a1 [net-_u10-pad9_ net-_u10-pad10_ net-_u10-pad11_ net-_u10-pad12_ ] [net-_u10-pad13_ net-_u10-pad14_ net-_u10-pad15_ net-_u10-pad16_ ] [net-_u11-pad1_ net-_u11-pad2_ net-_u11-pad3_ net-_u11-pad4_ net-_u11-pad5_ net-_u11-pad6_ net-_u11-pad7_ net-_u11-pad8_ ] u5
+a2 [net-_u11-pad1_ net-_u11-pad2_ net-_u11-pad3_ net-_u11-pad4_ net-_u11-pad5_ net-_u11-pad6_ net-_u11-pad7_ net-_u11-pad8_ ] [net-_sc2-pad2_ net-_sc6-pad2_ net-_sc10-pad2_ net-_sc14-pad2_ net-_sc15-pad2_ net-_sc11-pad2_ net-_sc7-pad2_ net-_sc3-pad2_ ] u11
+a3 [a3 a2 a1 a0 b3 b2 b1 b0 ] [net-_u10-pad9_ net-_u10-pad10_ net-_u10-pad11_ net-_u10-pad12_ net-_u10-pad13_ net-_u10-pad14_ net-_u10-pad15_ net-_u10-pad16_ ] u10
+* Schematic Name:                             amisha_4bit_wallace, NgSpice Name: amisha_4bit_wallace
+.model u5 amisha_4bit_wallace(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u11 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u10 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+.tran 0.1e-00 40e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+
+
+plot v(a0)  v(a1)+10  v(a2)+20  v(a3)+30 v(b0)+40 v(b1)+50 v(b2)+60 v(b3)+70
+
+plot v(prod0)  v(prod1)+10  v(prod2)+20 v(prod3)+30 v(prod4)+40 v(prod5)+50 v(prod6)+60 v(prod7)+70
+
+plot 
+.endc
+.end
